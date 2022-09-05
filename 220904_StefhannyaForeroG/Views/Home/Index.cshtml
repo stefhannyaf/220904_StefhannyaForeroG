@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Menu</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/css/Menu.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="sidenav">
+        <div class="menu-main-text">
+            <h1>PhotoExpress</h1>
+            <p>Select one option</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="menu-content">
+            <div class="menu-form">
+                <button type="button" onclick="redirectR()" class="btn btn-black">Register</button>
+                <button type="button" onclick="redirectL()" class="btn btn-black">List of events</button>
+                <button type="button" onclick="redirectA()" class="btn btn-black">Api information</button>
+            </div>
+        </div>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/Menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿@model List<_220904_StefhannyaForeroG.Models.Institute>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/css/Register.css" rel="stylesheet" />
+    <link href="~/Content/css/List.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper dark-header">
+        <header class="main-header">
+            <div class="logo"><a href="index.html">PHOTOEXPRESS</a></div>
+        </header>
+        <div class="container table-list">
+            <div class="row">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Institute Name</th>
+                            <th>Institute Address</th>
+                            <th>Number of students</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        @foreach (var info in Model)
+                        {
+                            <tr>
+                                <td>@info.Institute_name</td>
+                                <td>@info.Institute_address</td>
+                                <td>@info.Students_Number</td>
+                                <td>@info.Time_service</td>
+                                <td>@info.Price</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</body>
+</html>

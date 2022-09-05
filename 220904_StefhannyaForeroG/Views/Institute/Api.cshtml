@@ -1,0 +1,39 @@
+﻿@model List<_220904_StefhannyaForeroG.Models.Api>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/css/Api.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/css/Register.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- Category -->
+                <div class="single category">
+                    <h3 class="side-title">API</h3>
+                    <ul class="list-unstyled">
+                        @foreach (var info in Model)
+                        {
+                            <li><a href="" title="">IMEI: <span class="pull-right">@info.IMEI</span></a></li>
+                            <li><a href="" title="">Company ID: <span class="pull-right">@info.CompanyID</span></a></li>
+                            <li><a href="" title="">Vehicle ID: <span class="pull-right">@info.VehicleID</span></a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="~/Scripts/Api.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</html>

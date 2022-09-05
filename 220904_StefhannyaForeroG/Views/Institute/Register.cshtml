@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/css/Register.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper dark-header">
+        <header class="main-header">
+            <div class="logo"><a href="index.html">PHOTOEXPRESS</a></div>
+        </header>
+        <section class="register-inner">
+            <div class="register-middle">
+                <div class="register-details">
+                    @if (ViewData["Message"] != null)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @ViewData["Message"] with success
+                        </div>
+                    }
+                    <form action="@Url.Action("Register","Institute")" method="post">
+                        <h2>Register institute</h2>
+                        <label>
+                            <input type="text" name="Institute_name" id="Institute_name" placeholder="Institue Name" />
+                        </label>
+                        <label>
+                            <input type="text" name="Institute_address" id="Institute_address" placeholder="Institute Address" />
+                        </label>
+                        <label>
+                            <input type="number" name="Students_Number" id="Students_Number" placeholder="Number of students" />
+                        </label>
+                        <label>
+                            <input type="number" name="Time_service" id="Time_service" placeholder="Event start time" />
+                        </label>
+                        <label>
+                            <input id="toga" type="checkbox" /><span>Add toga and graduation cap (+ 20 USD)</span>
+                        </label>
+                        <label>Press the button "Calculate Price" to calculate the total in USD</label>
+                        <label>
+                            <input type="number" value="" name="Price" id="Price" placeholder="200 USD each student" readonly />
+                        </label>
+                        <div class="btn-sub">
+                            <button type="submit" name="button" class="pink-btn">Registrar</button>
+                        </div>
+                    </form>
+                    <div class="btn-sub">
+                        <button class="pink-btn" onclick="calculate()">Calculate Price</button>
+                    </div>
+                </div>
+</section>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/Register.js"></script>
+</body>
+</html>
